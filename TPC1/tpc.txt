@@ -1,0 +1,5 @@
+Continuar exercício da aula
+Marcar os elementos internos de cada conceito
+Limpar o xml que está a mais
+Carregar todos os dados de cada conceito para estruturas de dados
+Guardar esse informação num formato de dados conveniente
