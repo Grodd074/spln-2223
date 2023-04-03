@@ -12,7 +12,7 @@ tokens = (
     "PLUS",
     "NUMBER",
     "ATR_LINGUA",
-    #"ATR_TERMO",
+    "ATR_TERMO",
 )
 
 def t_ID(t):
@@ -25,6 +25,10 @@ def t_ID_LANG(t):
 
 def t_ATR_LINGUA(t):
     r"syn\s{1}|var\s{1}|nota"
+    return t
+
+def t_ATR_TERMO(t):
+    r"(\[Br\.\]|\[Pt\.\]|\(pop\.\)|\(m\)|\(f\)|\(pl\)|\(sg\))"
     return t
 
 def t_AREAS(t):

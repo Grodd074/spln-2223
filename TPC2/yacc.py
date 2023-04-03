@@ -3,68 +3,66 @@ import ply.yacc as yacc
 from lex import tokens
 
 def p_Dic(p):
-    "Dic : Es"
+    "Dic : ListaEntrada"
     pass
 
-def p_Es_One(p):
-    "Es : E"
+def p_ListaEntrada_One(p):
+    "ListaEntrada : Entrada"
     pass
 
-def p_Es(p):
-    "Es : Es E"
+def p_ListaEntrada(p):
+    "ListaEntrada : ListaEntrada Entrada"
     pass
 
-
-def p_ListNL(p):
-    "ListNL : ListNL NL"
+def p_ListaNL(p):
+    "ListaNL : ListaNL NL"
     pass
 def p_ListNLEmpty(p):
-    "ListNL :"
+    "ListaNL :"
     pass
 
-
-def p_E(p):
-    "E : ListNL id Areas Linguas"
+def p_Entrada(p):
+    "Entrada : ListaNL Id Areas Linguas"
     pass
 
-
-def p_id(p):
-    "id : ID NUMBER NL"
+def p_Id(p):
+    "Id : ID NUMBER NL"
     pass
-
-
 
 def p_Areas(p):
-    "Areas : AREAS ListAreas NL"
+    "Areas : AREAS ListaArea NL"
     pass
 
-def p_ListAreas_One(p):
-    "ListAreas : TEXT"
+def p_ListaArea_One(p):
+    "ListaArea : TEXT"
 
-def p_ListAreas(p):
-    "ListAreas : ListAreas ',' TEXT"
-
-
-
+def p_ListaArea(p):
+    "ListaArea : ListaArea ',' TEXT"
 
 def p_Linguas(p):
-    "Linguas : LANG NL Langs"
+    "Linguas : LANG NL ListaLingua"
 
-def p_Langs_One(p):
-    "Langs : Lang"
+def p_ListaLingua_One(p):
+    "ListaLingua : Lingua"
 
-def p_Langs(p):
-    "Langs : Langs Lang"
-
-def p_Lang(p):
-    "Lang : ID_LANG Val ListaAtrLing NL"
-    pass
-
+def p_ListaLingua(p):
+    "ListaLingua : ListaLingua Lingua"
 
 def p_Val(p):
-    "Val : TEXT"# ListaAtrTermo"
+    "Val : TEXT ListaAtrTermo"
     pass
 
+def p_ListaAtrTermo_Empty(p):
+    "ListaAtrTermo : "
+    pass
+
+def p_ListaAtrTermo(p):
+    "ListaAtrTermo : ListaAtrTermo ATR_TERMO"
+    pass
+
+def p_Lingua(p):
+    "Lingua : ID_LANG Val ListaAtrLing NL"
+    pass
 
 def p_ListaAtrLing_Empty(p):
     "ListaAtrLing :"
@@ -86,7 +84,7 @@ def p_error(p):
 parser = yacc.yacc()
 
 #with open('exemploSintaxeOCL.txt', 'r', encoding='utf-8') as f:
-with open('output-ocl.txt', 'r', encoding='utf-8') as f:
+with open('outputOCL.txt', 'r', encoding='utf-8') as f:
     content = f.read()
     parser.success = True
     parser.flag = True

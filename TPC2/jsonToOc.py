@@ -4,7 +4,7 @@ import re
 import json
 
 fileR = open("medicina.json", "r", encoding="utf8")
-fileW = open("output-ocl.txt", "w", encoding="utf8")
+fileW = open("outputOCL.txt", "w", encoding="utf8")
 myDic = json.load(fileR)
 
 globalId = 0

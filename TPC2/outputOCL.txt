@@ -291,8 +291,8 @@ ID: 33
 AREAS: Bioquímica
 LANG:
 	ga: ácido desoxirribonucleico (m)
-		+syn ADN
-		+syn (sg) DNA (sg)
+		+syn ADN (sg)
+		+syn DNA (sg)
 	es: ácido desoxirribonucleico
 		+syn ADN (sg)
 		+syn DNA (sg)
