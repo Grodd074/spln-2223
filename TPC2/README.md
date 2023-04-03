@@ -13,22 +13,23 @@ Criação de uma grámatica orientada ao conceito e parser para gramática.
 
 ### Gramática
 
-    Dic : Es
-    Es  : Es E
-        | E
-    NLs : NLs NL
-        |
-    E   : NLs id Areas Linguas
-    id  : ID NUMBER NL
-    Areas : AREAS ListAreas NL
-    ListAreas : ListAreas ',' TEXT
-              | TEXT
-    Linguas : LANG NL Langs
-            | LANG
-    Langs : Langs Lang
-          | Lang
-    Lang : ID_LANG Val ListAtrLing NL
-    Val : TEXT
+    Dic            : ListaEntrada
+    ListaEntrada   : ListaEntrada Entrada
+                   | Entrada
+    ListaNL        : ListaNL NL
+                   |
+    Entrada        : ListaNL Id Areas Linguas
+    Id             : ID NUMBER NL
+    Areas          : AREAS ListaArea NL
+    ListaArea      : ListaArea ',' TEXT
+                   | TEXT
+    Linguas        : LANG NL ListaLingua
+    ListaLingua    : ListaLingua Lingua
+                   | Lingua
+    Val            : TEXT ListaAtrTermo
+    ListaAtrTermo  : ListaAtrTermo ATR_TERMO
+                   |
+    Lingua         : ID_LANG Val ListaAtrLingua NL
     ListaAtrLingua : ListaAtrLingua AtrLingua
                    |
-    AtrLingua : NL PLUS ATR_LINGUA Val
+    AtrLingua      : NL PLUS ATR_LINGUA Val
