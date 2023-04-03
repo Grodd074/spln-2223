@@ -25279,9 +25279,11 @@
             },
             "nota": ""
         },
-        "coeficiente de variación      m\nEpidemioloxí": {
-            "categoria": "a",
-            "areas": [],
+        "coeficiente de variación": {
+            "categoria": "m",
+            "areas": [
+                "Epidemioloxía"
+            ],
             "SIN": [],
             "VAR": [],
             "linguas": {
@@ -64617,7 +64619,6 @@
                 "pt": [
                     "leucemia linfática",
                     "leucemia linfocítica",
-                    "",
                     "leucemia linfóide"
                 ]
             },
@@ -75472,8 +75473,7 @@
                 "en": [
                     "anterior scalene",
                     "scalenus anterior",
-                    "scalenus anterior muscle",
-                    ""
+                    "scalenus anterior muscle"
                 ],
                 "pt": [
                     "músculo escaleno anterior"
@@ -76346,7 +76346,6 @@
                 ],
                 "pt": [
                     "músculo flexor cubital do carpo",
-                    "",
                     "músculo flexor ulnar do carpo"
                 ],
                 "la": [
@@ -82100,8 +82099,7 @@
                 ],
                 "pt": [
                     "nevo atípico",
-                    "nevo displásico",
-                    ""
+                    "nevo displásico"
                 ]
             },
             "nota": ""
@@ -86893,8 +86891,7 @@
                 ],
                 "pt": [
                     "otosclerose",
-                    "otospongiose",
-                    ""
+                    "otospongiose"
                 ]
             },
             "nota": ""
@@ -90527,7 +90524,6 @@
                 "pt": [
                     "peste",
                     "peste bubônica [Br.]",
-                    "",
                     "peste bubónica [Pt.]"
                 ]
             },
@@ -96263,8 +96259,7 @@
             ],
             "SIN": [
                 "comechón (f) [pop.]",
-                "comechume (f) [pop.]",
-                ""
+                "comechume (f) [pop.]"
             ],
             "VAR": [
                 "proído",
@@ -99762,9 +99757,11 @@
             },
             "nota": ""
         },
-        "reflexo corneal      m\nSemioloxí": {
-            "categoria": "a",
-            "areas": [],
+        "reflexo corneal": {
+            "categoria": "m",
+            "areas": [
+                "Semioloxía"
+            ],
             "SIN": [
                 "reflexo palpebral"
             ],
@@ -113779,9 +113776,11 @@
             },
             "nota": ""
         },
-        "transposición      f\nXenétic": {
-            "categoria": "a",
-            "areas": [],
+        "transposición": {
+            "categoria": "f",
+            "areas": [
+                "Xenética"
+            ],
             "SIN": [],
             "VAR": [],
             "linguas": {
