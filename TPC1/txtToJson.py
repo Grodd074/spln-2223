@@ -58,7 +58,8 @@ for entrada in lista_texto:
         if len(lista_nota) == 1:
             nota = ""
         else:
-            nota = ''.join(lista_nota[1:]).strip()
+            nota = ''.join(lista_nota[1:]).replace("\n", "").strip() # Remove \n e strip()
+            nota = re.sub(r' {2,}',r' ',nota) # Remove espaços múltiplos
 
         # Extrai linguas
         lista_linguas = lista_nota[0].split('@')
@@ -66,15 +67,29 @@ for entrada in lista_texto:
 
         # Extrai VAR
         lista_var = lista_linguas[0].split('VAR.-')
-        var = ""
+        var = ""; arr_var = []
         if (len(lista_var) > 1):
             var = lista_var[1]
+            arr_var = var.split(";")
+
+            for i in range(0, len(arr_var)):
+                arr_var[i] = arr_var[i].replace("\n", "")     # Remove \n
+                arr_var[i] = arr_var[i].strip()               # Remove espaços leading and trailing
+                arr_var[i] = re.sub(r' {2,}',r' ',arr_var[i]) # Remove espaços múltiplos
 
         # Extrai SIN
         lista_sin = lista_var[0].split('SIN.-')
-        sin = ""
+        sin = ""; arr_sin = []
         if (len(lista_sin) > 1):
             sin = lista_sin[1]
+            arr_sin = sin.split(";")
+
+            # Limpa
+            for i in range(0, len(arr_sin)):
+                arr_sin[i] = arr_sin[i].replace("\n", "")     # Remove \n
+                arr_sin[i] = arr_sin[i].strip()               # Remove espaços leading and trailing
+                arr_sin[i] = re.sub(r' {2,}',r' ',arr_sin[i]) # Remove espaços múltiplos
+            
 
         # Extrai areas        
         lista_areas = lista_sin[0].split('&')
@@ -83,13 +98,13 @@ for entrada in lista_texto:
             areas = lista_areas[1].strip()
             areas = re.split("\s{2,}", areas)
         
-        # Extrai título e sexo
+        # Extrai título e categoria
         lista_titulo = lista_areas[0].strip()
-        titulo_sexo_str = re.split("C \d+\s+", lista_titulo)[1]
-        sexo = titulo_sexo_str[len(titulo_sexo_str)-1]
-        titulo = titulo_sexo_str[:-1].strip()
+        titulo_categoria_str = re.split("C \d+\s+", lista_titulo)[1]
+        categoria = titulo_categoria_str[len(titulo_categoria_str)-1]
+        titulo = titulo_categoria_str[:-1].strip()
         
-        dic['C'][titulo] = {'genero': sexo , 'areas': areas, 'SIN':sin, 'VAR': var,'linguas': linguas, 'nota': nota}
+        dic['C'][titulo] = {'categoria': categoria , 'areas': areas, 'SIN':arr_sin, 'VAR': arr_var,'linguas': linguas, 'nota': nota}
 
 print("R: "+str(len(dic['R'])),"C:"+ str(len(dic['C'])))   
         
