@@ -1,0 +1,41 @@
+ID: 638
+AREAS: Patoloxías 
+LANG:
+	ga: blefaropasmo (m)
+	es: blefarospasmo
+	en: blefarospasm
+	pt: blefaropasmo
+
+ID: 639
+AREAS:  Terapéutica 
+LANG:
+	ga: blefarotomía (f)
+		+syn tarsotomía
+	es: blefarotomía
+		+syn tarsotomía
+	en: blepharotomy
+		+syn tarsotomy
+	pt: blefarotomia
+		+syn tarsotomin
+
+ID:    640
+AREAS:  Semioloxía, Patoloxías
+LANG:
+	ga: blenorraxia (f)
+		+syn Blenorrea
+		+syn Gonorrea
+		+syn Gonococia
+		+nota Evítese "blenorraxialise"
+	es: blenorragia
+		+syn blenorrea
+		+syn gonococia
+		+syn gonorrea
+	en: blennorrhagia
+		+syn blennorrhea
+		+syn gonorrhea
+		+syn gonorrhoea
+	pt: blenorragia
+		+var blenorréia [Br.]
+		+var blenorreia [Pt.]
+		+var gonorréia [Br.]
+		+var gonorreia [Pt.]
