@@ -1,20 +1,21 @@
-# O que já foi feito
-Até ao momento, nos TPCs anteriores consegui:
+# TPC3
 
-- Pegar no PDF e gerir um XML e gerar um TXT com anotações
-- Carregar TXT anotado num dicionário python (coração)
+## O que foi feito até agora?
+
+- Pegar no PDF e gerar XML e criar TXT com anotações
+- Carregar ficheiro anotado num dicionário python (coração)
 - Gerar vistas
 	- Transformar para JSON
 	- Transformar para a minha linguagem
 
 - Definir a minha linguagém de dicionários
 - ESCREVER gramática que cobria uma linguagem proposta para definir dicionários.
-- Fazer analisadores léxicos e sintáticos para descobrir se há está bem estruturada
-- A gramática reconheçe o texto proposto.
+- Fazer analisador léxico e sintático para reconheçer a línguagem por mim definida
+- A gramática reconheçe o texto proposto
 
-# TPC3
+## Proposta
 
-Criação de uma vista HTML para o dicionário orientado ao conceito gerado no TPC2 (anterior).
+Gerar uma vista HTML a partir da línguagem por nós definida no TPC anterior.
 
 ## Ficheiros
 
