@@ -23,6 +23,7 @@ Gerar uma vista HTML a partir da línguagem por nós definida no TPC anterior.
 * **yacc.py** - Analisador sintático da gramática definida e conversor
 * **saida.html** - Ficheiro HTML de output
 * **entrada.txt** - Ficheiro gerado no TPC2 que segue a minha linguagem de dicionários
+* **view.py** - Definição de classes "Dicionário", "Entrada" e "Lingua"
 
 ## Notas
 - O ficheiro **entrada.txt** tem que acabar com um '\n' para que seja reconheçido pela gramática.
